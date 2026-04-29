@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app1
+  name: app
   labels:
-    app: app1
+    app: app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app1
+      app: app
   template:
     metadata:
       labels:
-        app: app1
+        app: app
     spec:
       containers:
-      - name: app1
+      - name: app
         image: sophon2048/iot_app1:latest
         ports:
         - containerPort: 80
